@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
     <title>Starwars RPG</title>
 </head>
 
@@ -24,18 +24,28 @@
     <div class="jumbotron mx-auto">
         <div class="container ">
             <div class="row text-center">
-                <div class="col-sm">
-                    <h1>One of three columns</h1>
+                <div class="col-sm" id="first">
+                    <img class="char" id="obi"
+                        src="https://www.thoughtco.com/thmb/pYLUnM7lQ6ef-ShHTdunHcExcw0=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/EP2-IA-60435_R_8x10-56a83bea3df78cf7729d314a.jpg"
+                        alt="box" width="150px" height="150px">
+                    <img class="char" id="luke"
+                        src="https://vignette.wikia.nocookie.net/starwars/images/d/d9/Luke-rotjpromo.jpg/revision/latest/scale-to-width-down/350?cb=20091030151422"
+                        alt="box" width="150px" height="150px">
+                    <img class="char" id="darth"
+                        src="https://boygeniusreport.files.wordpress.com/2015/08/darth-vader.jpg?quality=98&strip=all&w=782"
+                        alt="box" width="150px" height="150px">
+                    <img class="char" id="maul" src="https://www.dailydot.com/wp-content/uploads/2017/06/darth_maul.png"
+                        alt="box" width="150px" height="150px">
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-sm">
-                    hero position
+                <div class="col-sm" id="second">
+
                 </div>
                 <div class="col-sm">
                     <button type="button" class="btn btn-outline-danger">Fight!</button>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm" id="third">
                     opponent position
                 </div>
             </div>
@@ -51,7 +61,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/javascript/game.js"></script>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
 
 </html>

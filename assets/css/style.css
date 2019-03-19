@@ -15,7 +15,7 @@
 * Your players should be able to win and lose the game no matter what character they choose. The challenge should come from picking the right enemies, not choosing the strongest player. */
 
 body {
-    background: url(./assets/images/starwars\ background.png);
+    background: url(../images/starwars_background.png);
     background-color: rgb(5, 6, 14);
     background-position: top left;
     background-repeat: repeat;
@@ -25,12 +25,14 @@ body {
     margin: 30px;
     width: 80%;
     background-color: rgb(19, 19, 19);
-    /* border: 3px dashed rgb( 238, 219, 0); */
     color: rgb(173, 173, 173);
 }
 
 nav {
     background-color: rgb(19, 19, 19);
     color: rgb(173, 173, 173);
+}
 
+.col-sm {
+    margin: 20px;
 }
