@@ -25,29 +25,46 @@
         <div class="container ">
             <div class="row text-center">
                 <div class="col-sm" id="first">
-                    <img class="char" id="obi"
-                        src="https://www.thoughtco.com/thmb/pYLUnM7lQ6ef-ShHTdunHcExcw0=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/EP2-IA-60435_R_8x10-56a83bea3df78cf7729d314a.jpg"
-                        alt="box" width="150px" height="150px">
-                    <img class="char" id="luke"
-                        src="https://vignette.wikia.nocookie.net/starwars/images/d/d9/Luke-rotjpromo.jpg/revision/latest/scale-to-width-down/350?cb=20091030151422"
-                        alt="box" width="150px" height="150px">
-                    <img class="char" id="darth"
-                        src="https://boygeniusreport.files.wordpress.com/2015/08/darth-vader.jpg?quality=98&strip=all&w=782"
-                        alt="box" width="150px" height="150px">
-                    <img class="char" id="maul" src="https://www.dailydot.com/wp-content/uploads/2017/06/darth_maul.png"
-                        alt="box" width="150px" height="150px">
+                    <h2 id="instruct">Choose your Character</h2>
+                    <span id="obiSpan" class="char" attp="8" cap="5">
+                        <p class="att name">Obi-Wan Kenobi</p>
+                        <img src="https://www.thoughtco.com/thmb/pYLUnM7lQ6ef-ShHTdunHcExcw0=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/EP2-IA-60435_R_8x10-56a83bea3df78cf7729d314a.jpg"
+                            alt="obi-wan kenobi" id="obi">
+                        <span class="att charHP">120</span>
+                    </span>
+
+                    <span id="lukeSpan" class="char" attp="15" cap="10">
+                        <p class="att name">Luke Skywalker</p>
+                        <img src="https://vignette.wikia.nocookie.net/starwars/images/d/d9/Luke-rotjpromo.jpg/revision/latest/scale-to-width-down/350?cb=20091030151422"
+                            alt="luke skywalker" id="luke">
+                        <span class="att charHP">100</span>
+                    </span>
+
+                    <span id="vaderSpan" class="char" attp="10" cap="15">
+                        <p class="att name">Darth Vader</p>
+                        <img src="https://boygeniusreport.files.wordpress.com/2015/08/darth-vader.jpg?quality=98&strip=all&w=782"
+                            alt="darth vader" id="vader">
+                        <span class="att charHP">150</span>
+                    </span>
+
+                    <span id="maulSpan" class="char" attp="4" cap="25">
+                        <p class="att name">Darth Maul</p>
+                        <img src="https://www.dailydot.com/wp-content/uploads/2017/06/darth_maul.png" alt="darth maul"
+                            id="maul">
+                        <span class="att charHP">180</span>
+                    </span>
+
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-sm" id="second">
-
-                </div>
-                <div class="col-sm">
-                    <button type="button" class="btn btn-outline-danger">Fight!</button>
-                </div>
-                <div class="col-sm" id="third">
-                    opponent position
-                </div>
+                <div class="col-sm" id="second"></div>
+                <div class="col-sm"><button type="button" class="btn btn-outline-danger" id="fightBtn">Fight!</button></div>
+                <div class="col-sm" id="third"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm" id="attack"></div>
+                <div class="col-sm"></div>
+                <div class="col-sm" id="defend"></div>
             </div>
         </div>
     </div>
