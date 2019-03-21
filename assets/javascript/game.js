@@ -13,6 +13,7 @@ var idClicked = "";
 var playerEmpt = true;
 var oppEmpt = true;
 var gameEnd = false;
+// var bodyClone = $("#body").clone(); 
 
 // When the game starts, the player will choose a character by clicking on the fighter's picture. 
 $(".char").click(function (e) {
@@ -34,9 +35,10 @@ $(".char").click(function (e) {
         if (idClicked === "maul") {
             $("#maulSpan").appendTo($("#second"));
         }
-        playerEmpt = false;
         $("#first>.char").css({ "border": "2px solid black", "background-color": "rgb(170, 36, 36)" });
         $("#instruct").text("Choose your Opponent");
+
+        playerEmpt = false;
         heroHP = parseInt($("#second>.char>.charHP").text());
         heroAtt = parseInt($("#second>span").attr("attp"));
         // console.log(heroHP);
@@ -60,9 +62,10 @@ $(".char").click(function (e) {
         if (idClicked === "maul") {
             $("#maulSpan").appendTo($("#third"));
         }
-        oppEmpt = false;
         $("#third>.char").css({ "border": "2px solid green", "background-color": "black", "color": "rgb(173, 173, 173)" });
         $("#instruct").text("Get Ready to Fight!");
+
+        oppEmpt = false;
         oppHP = parseInt($("#third>.char>.charHP").text());
         oppAtt = parseInt($("#third>span").attr("cap"));
         oppName = $("#third>.char>.name").text();
@@ -96,6 +99,7 @@ $("#fight_btn").click(function () {
         if (oppHP <= 0) {
             $("#instruct").text("Nice job! Pick another opponant!");
             $("#third>.char").remove();
+            $("#defend").empty();
             oppEmpt = true;
 
             oppHP = parseInt($("#third>.char>.charHP").text());
@@ -124,34 +128,15 @@ $("#new_game_btn").click(function (e) {
     heroAtt = 0;
     oppAtt = 0;
     oppNum = 3;
+
+    //deffender name
+    oppName = "";
+
+    // Click events
+    idClicked = "";
     playerEmpt = true;
     oppEmpt = true;
     gameEnd = false;
 
-    if (condition) {
-    }
+    $("#body:reset");
 });
-
-// 3. The player will keep hitting the attack button in an effort to defeat their opponent.
-
-//    * When the defender's `HP` is reduced to zero or below, remove the enemy from the `defender area`. The player character can now choose a new opponent.
-
-// 4. The player wins the game by defeating all enemy characters. The player loses the game the game if their character's `HP` falls to zero or below.
-
-// ##### Option 2 Game design notes
-
-// * Each character in the game has 3 attributes: `Health Points`, `Attack Power` and `Counter Attack Power`.
-
-// * Each time the player attacks, their character's Attack Power increases by its base Attack Power. 
-//   * For example, if the base Attack Power is 6, each attack will increase the Attack Power by 6 (12, 18, 24, 30 and so on).
-// * The enemy character only has `Counter Attack Power`. 
-
-//   * Unlike the player's `Attack Points`, `Counter Attack Power` never changes.
-
-// * The `Health Points`, `Attack Power` and `Counter Attack Power` of each character must differ.
-
-// * No characters in the game can heal or recover Health Points. 
-
-//   * A winning player must pick their characters wisely by first fighting an enemy with low `Counter Attack Power`. This will allow them to grind `Attack Power` and to take on enemies before they lose all of their `Health Points`. Healing options would mess with this dynamic.
-
-// * Your players should be able to win and lose the game no matter what character they choose. The challenge should come from picking the right enemies, not choosing the strongest player.
