@@ -7,6 +7,7 @@ var oppNum = 3;
 
 //deffender name
 var oppName = "";
+var btn;
 
 // Click events
 var idClicked = "";
@@ -110,19 +111,20 @@ $("#fight_btn").click(function () {
             if (oppNum === 0) {
                 $("#instruct").text("You won! Great job!");
                 gameEnd = true;
-                $("#button_contain").append('<button type="button" class="btn btn-success" id="new_game_btn">New Game</button>');
+                $("#new_game_btn").removeAttr('style');
             }
-
+            
         } else if (heroHP <= 0) {
             $("#instruct").text("Oh no! you lost!");
             gameEnd = true;
-            $("#button_contain").append('<button type="button" class="btn btn-success" id="new_game_btn">New Game</button>');
+            $("#new_game_btn").removeAttr('style');
         }
     }
 
 });
 // restart button
-$("#new_game_btn").click(function (e) {
+$("#new_game_btn").click(function () {
+    window.location.href=window.location.href;
     heroHP = 0;
     oppHP = 0;
     heroAtt = 0;
@@ -138,5 +140,4 @@ $("#new_game_btn").click(function (e) {
     oppEmpt = true;
     gameEnd = false;
 
-    $("#body:reset");
 });
